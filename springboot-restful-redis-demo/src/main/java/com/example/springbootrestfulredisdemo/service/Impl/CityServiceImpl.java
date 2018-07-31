@@ -1,0 +1,95 @@
+package com.example.springbootrestfulredisdemo.service.Impl;
+
+import com.example.springbootrestfulredisdemo.dao.CityDao;
+import com.example.springbootrestfulredisdemo.domain.City;
+import com.example.springbootrestfulredisdemo.service.CityService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+@Service
+public class CityServiceImpl implements CityService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CityServiceImpl.class);
+
+    @Autowired
+    private CityDao cityDao;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    /**
+     * 查询所有城市
+     * @return
+     */
+    @Override
+    public List<City> findAllCity() {
+        return cityDao.findAllCity();
+    }
+
+    /**
+     * 获取城市逻辑
+     * 如果缓存存在，从缓存中获取城市信息
+     * 如果缓存不存在，从db中获取城市信息，然后插入缓存
+     * @param id
+     * @return
+     */
+    @Override
+    public City findCityById(Long id){
+        //从缓存中获取城市信息
+        String key = "city_" + id;
+        ValueOperations<String,City> operations = redisTemplate.opsForValue();
+        //缓存存在
+        boolean hasKey = redisTemplate.hasKey(key);
+        if(hasKey){
+            City city = operations.get(key);
+            LOGGER.info("CityServiceImpl.findCityById():从缓存中获取了城市>>"+city.toString());
+            return city;
+        }
+        City city = cityDao.findById(id);
+        operations.set(key,city,10, TimeUnit.SECONDS);
+        LOGGER.info("CityServiceImpl.findCityById():城市插入缓存>>"+ city.toString());
+        return city;
+    }
+
+    @Override
+    public Long saveCity(City city) {
+        return cityDao.saveCity(city);
+    }
+    /**
+     * 更新城市逻辑，
+     * 如果缓存存在，删除
+     * 如果缓存不存在，不操作
+     */
+    @Override
+    public Long updateCity(City city) {
+        Long ret = cityDao.updateCity(city);
+        //缓存存在，删除缓存
+        String key = "city_" + city.getId();
+        boolean hasKey = redisTemplate.hasKey(key);
+        if(hasKey){
+            redisTemplate.delete(key);
+            LOGGER.info("CityServiceImpl.updateCity():从缓存中删除城市>>" + city.toString());
+        }
+        return ret;
+    }
+
+    @Override
+    public Long deleteCity(Long id) {
+        Long ret = cityDao.deleteCity(id);
+        //缓存存在，删除缓存
+        String key  = "city_"+ id;
+        boolean hasKey = redisTemplate.hasKey(key);
+        if(hasKey){
+            redisTemplate.delete(key);
+            LOGGER.info("CityServiceImpl.deleteCity():从缓存中删除城市ID"+id);
+        }
+        return ret;
+    }
+}
