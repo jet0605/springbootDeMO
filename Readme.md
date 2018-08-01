@@ -15,3 +15,7 @@ springboot-mybaits-annotation-demo是通过注解的形式而不是通过xml映�
 springboot-druid是springboot + Druid实现多数据源读取数据
 
 springboot-restful-redis-demo是springboot+restful+redis+mybabits的增删改查，包括存入缓存取出缓存的基本demo
+
+springboot-swagger2-demo是springboot+restful+swagger2进行代码生成接口文档。
+
+![swagger2](sceenshot\swagger2.png)
