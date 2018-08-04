@@ -19,3 +19,6 @@ springboot-restful-redis-demo是springboot+restful+redis+mybabits的增删改查
 springboot-swagger2-demo是springboot+restful+swagger2进行代码生成接口文档。
 
 ![swagger2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/swagger2.png)
+
+springboot-shiro 是springboot+shiro的demo
+
