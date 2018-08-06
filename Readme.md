@@ -24,6 +24,8 @@ websocket是websocket的demo
 
 file-demo是springboot的文件三种文件上传方式（单个文件上传，批量文件上传，base64编码文件上传）的demo
 
+exception-demo是springboot对全局异常的捕获方式
+
 **springboot-swagger2-demo运行截图**
 ![swagger2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/swagger2.png)
 
@@ -38,3 +40,7 @@ file-demo是springboot的文件三种文件上传方式（单个文件上传，�
 ![p2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/websocket2.png)
 ![p3](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/websocket3.png)
 
+**exception-demo运行截图**
+![e1](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/exception1.png)
+![e2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/exception2.png)
+![e3](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/exception3.png)
