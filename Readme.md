@@ -18,6 +18,13 @@ springboot-restful-redis-demo是springboot+restful+redis+mybabits的增删改查
 
 springboot-swagger2-demo是springboot+restful+swagger2进行代码生成接口文档。
 
+springboot-shiro 是springboot+shiro的demo
+
+websocket是websocket的demo
+
+file-demo是springboot的文件三种文件上传方式（单个文件上传，批量文件上传，base64编码文件上传）的demo
+
+**springboot-swagger2-demo运行截图**
 ![swagger2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/swagger2.png)
 
 **springboot-shiro 是springboot+shiro的demo
