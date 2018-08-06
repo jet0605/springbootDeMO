@@ -20,10 +20,14 @@ springboot-swagger2-demo是springboot+restful+swagger2进行代码生成接口�
 
 ![swagger2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/swagger2.png)
 
-springboot-shiro 是springboot+shiro的demo
-运行截图（软件postman）
+**springboot-shiro 是springboot+shiro的demo
+运行截图（软件postman）**
 ![p1](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/p1.png)
 ![p2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/p2.png)
 ![p3](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/p3.png)
 ![p4](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/p4.png)
+**websocket简易demo**
+![p1](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/websocket1.png)
+![p2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/websocket2.png)
+![p3](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/websocket3.png)
 
