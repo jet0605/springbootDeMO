@@ -26,6 +26,10 @@ file-demo是springboot的文件三种文件上传方式（单个文件上传，�
 
 exception-demo是springboot对全局异常的捕获方式
 
+
+data-validation-demo是springboot中对数据校验的三种方式，如自带的注解校验，自定义注解校验，分groups的注解校验
+
+
 **springboot-swagger2-demo运行截图**
 ![swagger2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/swagger2.png)
 
