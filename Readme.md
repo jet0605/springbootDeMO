@@ -30,6 +30,8 @@
 
 **repetition-commit-demo-one**是防止重复提交的本地锁方法的一个demo
 
+**repetition-commit-demo-two**是防止重复提交利用redis实现的一个分布锁demo
+
 
 
 
