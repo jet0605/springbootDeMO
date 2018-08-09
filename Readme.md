@@ -32,6 +32,8 @@
 
 **repetition-commit-demo-two**是防止重复提交利用redis实现的一个分布锁demo
 
+**spring-transaction-management**是springboot事务管理官方的一个例子
+
 
 
 
