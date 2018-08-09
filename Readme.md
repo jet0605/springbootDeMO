@@ -34,7 +34,7 @@
 
 **spring-transaction-management**是springboot事务管理官方的一个例子
 
-
+**springboot-sendemail-demo**是利用springboot写一个简单的发邮件功能
 
 
 **springboot-swagger2-demo运行截图**
