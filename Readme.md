@@ -36,6 +36,8 @@
 
 **springboot-sendemail-demo**是利用springboot写一个简单的发邮件功能
 
+**EhcacheDemo**是利用ssm+ehcache写的一个缓存demo
+
 
 **springboot-swagger2-demo运行截图**
 ![swagger2](https://github.com/jet0605/springbootDeMO/blob/master/sceenshot/swagger2.png)
